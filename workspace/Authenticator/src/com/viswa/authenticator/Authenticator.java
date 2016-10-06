@@ -46,7 +46,7 @@ public class Authenticator {
 	    try {
 	    	Signer signer = Authenticator.getSigningOracle(secret);
 		    PasscodeGenerator pcg = new PasscodeGenerator(signer,(challenge == null) ? 6 : 9);
-		    if(syncWithServer) {
+		    if(syncWithServer) { 
 		    	//use this constructor if you are under proxy
 		    	//NetworkTimeProvider ntp = new NetworkTimeProvider("proxyaddress", port );
 		    	//use this constructor if not under proxy

@@ -55,7 +55,6 @@ public NetworkTimeProvider(String proxyAddress, int proxyPort) {
 	
 	DefaultHttpClient mHttpClient = new DefaultHttpClient();
 	if((this.proxyAddress!=null) && (this.proxyPort!=0)) {
-		//HttpHost proxy = new HttpHost("ega-proxy.ega.gov.bh", 3128);
 		HttpHost proxy = new HttpHost(this.proxyAddress, this.proxyPort);
 		mHttpClient.getParams().setParameter(ConnRoutePNames.DEFAULT_PROXY,proxy);
 	}
