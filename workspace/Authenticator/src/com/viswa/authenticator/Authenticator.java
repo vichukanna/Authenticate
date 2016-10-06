@@ -48,7 +48,7 @@ public class Authenticator {
 		    PasscodeGenerator pcg = new PasscodeGenerator(signer,(challenge == null) ? 6 : 9);
 		    if(syncWithServer) {
 		    	//use this constructor if you are under proxy
-		    	//NetworkTimeProvider ntp = new NetworkTimeProvider("proxy address", port);
+		    	//NetworkTimeProvider ntp = new NetworkTimeProvider("proxy address", port );
 		    	//use this constructor if not under proxy
 		    	NetworkTimeProvider ntp = new NetworkTimeProvider();
 		    	long networkTime = ntp.getNetworkTime();
