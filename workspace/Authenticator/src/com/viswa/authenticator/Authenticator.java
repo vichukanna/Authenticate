@@ -48,9 +48,9 @@ public class Authenticator {
 		    PasscodeGenerator pcg = new PasscodeGenerator(signer,(challenge == null) ? 6 : 9);
 		    if(syncWithServer) {
 		    	//use this constructor if you are under proxy
-		    	NetworkTimeProvider ntp = new NetworkTimeProvider("ega-proxy.ega.gov.bh", 3128);
+		    	//NetworkTimeProvider ntp = new NetworkTimeProvider("proxy address", port);
 		    	//use this constructor if not under proxy
-		    	//NetworkTimeProvider ntp = new NetworkTimeProvider();
+		    	NetworkTimeProvider ntp = new NetworkTimeProvider();
 		    	long networkTime = ntp.getNetworkTime();
 		    	otp_state = (new TotpCounter(timeStep)).getValueAtTime((networkTime + (60 * 1000))/1000);
 		    } else { //get current system timestamp
